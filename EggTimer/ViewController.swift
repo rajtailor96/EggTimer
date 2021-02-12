@@ -39,11 +39,11 @@ class ViewController: UIViewController {
         if secondsPassed < totalTime {
             secondsPassed += 1
             let increment = Float(secondsPassed)/Float(totalTime)
-            
+             MP3.background.startMusic()
             timerProgress.setProgress(increment, animated: true)
         } else {
             timer.invalidate()
-
+            MP3.background.stopMusic()
             titleLabel.text = "Done!"
         }
     }
@@ -64,12 +64,12 @@ class MP3{
     var audioPlayer: AVAudioPlayer?
     
     func startMusic(){
-        if let bundle = Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3"){
+        if let bundle = Bundle.main.path(forResource: "sound", ofType: "mp3"){
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             do{
                 audioPlayer = try AVAudioPlayer(contentsOf: backgroundMusic as URL)
                 guard let audioPlayer = audioPlayer else {return}
-                audioPlayer.numberOfLoops = -1
+                audioPlayer.numberOfLoops = 1
                 audioPlayer.prepareToPlay()
                 audioPlayer.play()
             } catch {
