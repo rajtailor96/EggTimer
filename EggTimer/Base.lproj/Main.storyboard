@@ -128,27 +128,20 @@
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oQ4-XT-L4V">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="6"/>
+                                                <rect key="frame" x="0.0" y="120.5" width="374" height="6"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="5" id="1xD-Hu-mDh"/>
                                                 </constraints>
                                                 <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-xP-kIW">
-                                                <rect key="frame" x="162.5" y="107.5" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="musicSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="bCT-7g-O1t"/>
-                                                </connections>
-                                            </switch>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="oQ4-XT-L4V" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="2lr-VA-N5z"/>
                                             <constraint firstItem="oQ4-XT-L4V" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="IiG-5W-Rf2"/>
-                                            <constraint firstItem="YDM-xP-kIW" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="OIW-bp-ktC"/>
                                             <constraint firstAttribute="trailing" secondItem="oQ4-XT-L4V" secondAttribute="trailing" id="OfL-a9-Uyt"/>
-                                            <constraint firstItem="YDM-xP-kIW" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="dTL-e7-Dia"/>
-                                            <constraint firstItem="oQ4-XT-L4V" firstAttribute="top" secondItem="nJN-th-c5K" secondAttribute="top" id="ztg-TX-fZQ"/>
+                                            <constraint firstItem="oQ4-XT-L4V" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="h2t-Te-gsN"/>
+                                            <constraint firstItem="oQ4-XT-L4V" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="vFX-GX-zTQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>

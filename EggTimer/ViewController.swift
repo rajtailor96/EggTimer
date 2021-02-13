@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     let eggTimes = ["Soft": 5,
                     "Medium": 8,
                     "Hard": 12]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //MP3.background.startMusic()
+        // Do any additional setup after loading the view.
+    }
 
     @IBAction func hardnessSelected(_ sender: UIButton) {
         timer.invalidate()
@@ -39,23 +45,13 @@ class ViewController: UIViewController {
         if secondsPassed < totalTime {
             secondsPassed += 1
             let increment = Float(secondsPassed)/Float(totalTime)
-             MP3.background.startMusic()
             timerProgress.setProgress(increment, animated: true)
+            MP3.background.startMusic()
         } else {
             timer.invalidate()
             MP3.background.stopMusic()
             titleLabel.text = "Done!"
         }
-    }
-    
-    @IBAction func musicSwitch(_ sender: UISwitch) {
-        if(sender.isOn){
-            MP3.background.startMusic()
-        } else {
-            MP3.background.stopMusic()
-        }
-        
-        
     }
 }
 
@@ -69,7 +65,7 @@ class MP3{
             do{
                 audioPlayer = try AVAudioPlayer(contentsOf: backgroundMusic as URL)
                 guard let audioPlayer = audioPlayer else {return}
-                audioPlayer.numberOfLoops = 1
+                audioPlayer.numberOfLoops = 0
                 audioPlayer.prepareToPlay()
                 audioPlayer.play()
             } catch {
